@@ -1,0 +1,47 @@
+#-------------------------------------------------
+#  Quickie Q1
+#  POH W&B
+#  S. Range
+#  20160112
+#
+#  Dimensional unit and parameter data.
+#  Mass & Inertia breakdown.
+#-------------------------------------------------
+
+#  Names and scalings for units to be used for trim and eigenmode calculations.
+#  The Lunit and Munit values scale the mass, xyz, and inertia table data below.
+#  Lunit value will also scale all lengths and areas in the AVL input file.
+Lunit = 0.3048 m
+Munit = 14.594 kg
+Tunit = 1.0    s
+
+#------------------------- 
+#  Gravity and density to be used as default values in trim setup (saves runtime typing).
+#  Must be in the unit names given above (m,kg,s).
+g   = 9.81
+rho = 1.225
+
+#-------------------------
+#  Mass & Inertia breakdown.
+#  x y z  is location of item's own CG.
+#  Ixx... are item's inertias about item's own CG.
+#
+#  x,y,z system here must be exactly the same one used in the .avl input file
+#     (same orientation, same origin location, same length units)
+#
+#  mass       x         y         z          Ixx            Iyy            Izz            Ixy            Ixz            Iyz
+#
+*    0.03108    0.08333   0.08333   0.08333      0.00002158     0.00002158     0.00002158
++    0.        -0.967     0.       -0.958        0.             0.             0.
+   170.        65.8       0.       32.           0.         51000.         51000.         ! pilot
+    48.        53.8       0.       21.           0.             0.             0.         ! fuel
+    30.        88.8       0.       30.           0.             0.             0.         ! baggage
+    75.        18.8       0.       25.           0.             0.             0.         ! onan engine
+     6.         6.5       0.       25.        3000.          3000.          3000.         ! propeller and spinner
+    10.        50.        0.       30.           0.             0.             0.         ! avionics
+     5.        25.        0.       25.           0.             0.             0.         ! battery
+    60.        40.        0.       13.      160000.          2600.        160000.         ! fwd wing and gear
+    30.        95.        0.       45.       66000.          1000.         66000.         ! aft wing
+     5.       180.        0.       40.           0.             0.             0.         ! vstab
+     3.       197.        0.       22.           0.             0.             0.         ! tailgear
+    51.        87.5       0.       25.           0.        110000.        110000.         ! residual empty mass (fuse)

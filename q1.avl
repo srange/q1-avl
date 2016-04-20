@@ -1,0 +1,268 @@
+Quickie Q1
+ 0.                    !   Mach
+ 0     0     0.0       !   iYsym  iZsym  Zsym
+53.5   1.92 16.45      !   Sref   Cref   Bref   reference area, chord, span
+ 4.055 0.    1.812     !   Xref   Yref   Zref   moment reference location (arb.)
+ 0.0060                !   CDp
+
+#
+#==============================================================
+#
+SURFACE
+Canard
+12  1.0  24  1.0   ! Nchord   Cspace   Nspan  Sspace
+
+YDUPLICATE
+ 0.
+
+ANGLE
+ 0.
+
+SCALE
+ 1.    1.    1.
+
+TRANSLATE
+ 1.2          0.         .212
+
+ 
+#-----------------------------
+SECTION
+#    Xle         Yle         Zle         chord       angle
+       0.         0.          0.          2.167      -0.5
+
+AFIL
+gu255118.dat
+ 
+ 
+#-----------------------------
+SECTION
+#    Xle         Yle         Zle         chord       angle
+       0.         0.875        0.          2.167      -0.5
+
+AFIL
+gu255118.dat
+
+CONTROL
+#Cname   Cgain  Xhinge  HingeVec       SgnDup
+elevator   1.0    0.72    0. 0. 0.       1.0
+
+#-----------------------------
+SECTION
+#    Xle         Yle         Zle         chord       angle
+      1.010       6.492         -0.354      1.362       -1.35
+
+AFIL
+gu255118.dat
+
+CONTROL
+#Cname   Cgain  Xhinge  HingeVec       SgnDup
+elevator   1.0    0.72    0. 0. 0.       1.0
+
+#-----------------------------
+SECTION
+#    Xle         Yle         Zle         chord       angle
+      1.1917      7.5        -0.417      1.217      -1.5
+
+AFIL
+gu255118.dat
+
+
+#
+#==============================================================
+#
+SURFACE
+Wing
+12  1.0  24  1.0   ! Nchord   Cspace   Nspan  Sspace
+
+YDUPLICATE
+ 0.
+
+ANGLE
+ 0.
+
+SCALE
+ 1.    1.    1.
+
+TRANSLATE
+ 6.533          0.         2.502
+
+ 
+#-----------------------------
+SECTION
+#    Xle         Yle         Zle         chord       angle
+       0.         0.          0.          1.883        0.4
+
+AFIL
+e1212mod.dat
+ 
+ 
+#-----------------------------
+SECTION
+#    Xle         Yle         Zle         chord       angle
+       0.         0.875        0.          1.883        0.4
+
+AFIL
+e1212mod.dat
+
+CONTROL
+#Cname   Cgain  Xhinge  HingeVec       SgnDup
+aileron   1.0    0.72    0. 0. 0.       -1.0
+
+#-----------------------------
+SECTION
+#    Xle         Yle         Zle         chord       angle
+      0.325      4.33        0.185      1.558      -0.1
+
+AFIL
+e1212mod.dat
+
+CONTROL
+#Cname   Cgain  Xhinge  HingeVec       SgnDup
+aileron   1.0    0.72    0. 0. 0.       -1.0
+
+#-----------------------------
+SECTION
+#    Xle         Yle         Zle         chord       angle
+      0.641      8.33         0.4      1.242      -2.6
+
+AFIL
+e1212mod.dat
+
+
+#
+#==============================================================
+#
+SURFACE
+HFuse
+36  0.5  12  0.5   ! Nchord   Cspace   Nspan  Sspace
+
+YDUPLICATE
+ 0.
+
+ANGLE
+ 0.
+
+SCALE
+ 1.    1.    1.
+
+TRANSLATE
+ -.067            0.         1.042
+
+#-----------------------------
+SECTION
+#    Xle         Yle         Zle         chord       angle
+       0.         0.           0.          14.63       0.
+
+#-----------------------------
+SECTION
+#    Xle         Yle         Zle         chord       angle
+       0.125       0.625        0.          10.29          0.
+
+#-----------------------------
+SECTION
+#    Xle         Yle         Zle         chord       angle
+       1.267       0.875        0.          7.066          0.
+
+
+#
+#==============================================================
+#
+#SURFACE
+#CanardJ
+#12  1.0  6  1.0   ! Nchord   Cspace   Nspan  Sspace
+
+#YDUPLICATE
+# 0.
+
+#ANGLE
+# 0.
+
+#SCALE
+# 1.    1.    1.
+
+#TRANSLATE
+# 1.2          0.         .212
+
+#-----------------------------
+#SECTION
+#    Xle         Yle         Zle         chord       angle
+#       0.         0.875        0.          2.233      0.
+
+#-----------------------------
+#SECTION
+#    Xle         Yle         Zle         chord       angle
+#       0.         0.875        0.83       2.233      0.
+
+
+#
+#==============================================================
+#
+#SURFACE
+#WingJ
+#12  1.0  6  1.0   ! Nchord   Cspace   Nspan  Sspace
+
+#YDUPLICATE
+# 0.
+
+#ANGLE
+# 0.
+
+#SCALE
+# 1.    1.    1.
+
+#TRANSLATE
+# 6.533          0.         2.502
+
+#-----------------------------
+#SECTION
+#    Xle         Yle         Zle         chord       angle
+#       0.         0.875       -1.46       1.9        0.
+
+#-----------------------------
+#SECTION
+#    Xle         Yle         Zle         chord       angle
+#       0.         0.875        0.          1.9        0.
+
+
+#
+#==============================================================
+#
+SURFACE
+VStab
+10  1.0  16  1.0   ! Nchord   Cspace   Nspan  Sspace
+
+ANGLE
+ 0.
+
+SCALE
+ 1.    1.    1.
+
+TRANSLATE
+ 12.616          0.         1.042
+
+#-----------------------------
+SECTION
+#    Xle         Yle         Zle         chord       angle
+       0.         0.       0.       1.92        0.
+	
+CONTROL
+#Cname   Cgain  Xhinge  HingeVec
+rudder   1.0    0.89    0. 0. 0.
+
+	
+#-----------------------------
+SECTION
+#    Xle         Yle         Zle         chord       angle
+       1.57         0.       2.25       0.96        0.
+	   
+CONTROL
+#Cname   Cgain  Xhinge  HingeVec
+rudder   1.0    0.87    0. 0. 0.
+
+	   
+#-----------------------------
+SECTION
+#    Xle         Yle         Zle         chord       angle
+       2.         0.        2.86          0.70        0.
+
+	   
